@@ -42,6 +42,22 @@
         button:hover {
             background-color: #0056b3;
         }
+        .projects {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .project {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-10px);
+        }
     </style>
 </head>
 <body>
@@ -49,11 +65,30 @@
         <h1>Welcome to CQYC-OIer!</h1>
         <p>We are the competitive programming enthusiasts from Chongqing Yucai High School.</p>
         <button onclick="redirectToCQYC()">Visit CQYC Website</button>
+
+        <div class="projects">
+            <div class="project">
+                <h2>Timer</h2>
+                <p>A simple timer project.</p>
+                <button onclick="redirectToTimer()">Visit Timer Project</button>
+            </div>
+            <div class="project">
+                <h2>Math-Class</h2>
+                <p>A project related to mathematical operations.</p>
+                <button onclick="redirectToMathClass()">Visit Math-Class Project</button>
+            </div>
+        </div>
     </div>
 
     <script>
         function redirectToCQYC() {
             window.location.href = "http://www.cqyc.com";
+        }
+        function redirectToTimer() {
+            window.location.href = "/timer";
+        }
+        function redirectToMathClass() {
+            window.location.href = "/Math-Class";
         }
     </script>
 </body>
